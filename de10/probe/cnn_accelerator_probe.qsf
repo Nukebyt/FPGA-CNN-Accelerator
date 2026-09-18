@@ -1,0 +1,30 @@
+# cnn_accelerator_probe.qsf -- Quartus Prime Lite project settings.
+# Target: Terasic DE10-Standard, Cyclone V, 5CSXFC6D6F31C6.
+#
+# This project synthesizes the bare algorithmic core (cnn_accelerator.v)
+# alone, with NO pin assignments -- clk/rst/activation_in/etc. are left to
+# the Fitter's default placement. That is correct for resource utilization
+# and Fmax/STA numbers, but this project does NOT produce a programmable
+# bitstream (no .sof is meaningful without I/O pins assigned). See
+# ../board/cnn_accelerator_de10.qsf for the pin-locked, programmable
+# board bring-up project.
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSXFC6D6F31C6
+set_global_assignment -name TOP_LEVEL_ENTITY cnn_accelerator
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "21.1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name EDA_SIMULATION_TOOL "<None>"
+
+set_global_assignment -name VERILOG_FILE "../../rtl/cnn_accelerator.v"
+set_global_assignment -name VERILOG_FILE "../../rtl/mac_window.v"
+set_global_assignment -name VERILOG_FILE "../../rtl/quant_relu.v"
+set_global_assignment -name VERILOG_FILE "../../rtl/pool_unit.v"
+
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 4
+
+set_global_assignment -name SDC_FILE cnn_accelerator_probe.sdc
+set_global_assignment -name LAST_QUARTUS_VERSION "21.1.0 Lite Edition"

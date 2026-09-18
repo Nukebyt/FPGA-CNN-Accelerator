@@ -1,0 +1,37 @@
+# The original Xilinx/Vivado-targeted repo this project was inspired by is
+# kept locally for reference only. It is a separate, independently
+# licensed clone (see its own README for its own upstream attribution) and
+# is intentionally excluded from this repository.
+Efficient-FPGA-CNN-Accelerator/
+
+# Quartus Prime build artifacts
+de10/**/db/
+de10/**/incremental_db/
+de10/**/output_files/
+de10/**/greybox_tmp/
+de10/**/c5_pin_model_dump.txt
+*.qws
+*.rpt
+*.summary
+*.smsg
+*.pin
+*.sld
+*.done
+*.jdi
+*.qarlog
+*.qar
+*.qws
+*.spd
+transcript
+tmp-clearbox/
+
+# Simulation
+sim/*.vvp
+sim/*.vcd
+
+# Claude Code session/tooling state
+.claude/
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db

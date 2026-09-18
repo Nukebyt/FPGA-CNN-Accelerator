@@ -1,0 +1,4 @@
+QUARTUS_VERSION = "21.1"
+DATE = "18:00:00  September 18, 2026"
+
+PROJECT_REVISION = "cnn_accelerator_de10"
