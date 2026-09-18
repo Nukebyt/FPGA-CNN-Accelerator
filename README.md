@@ -153,10 +153,3 @@ per-stage pass/fail table) is in [`de10/RESULTS.md`](de10/RESULTS.md).
 Both projects meet 50 MHz with positive slack on every corner (worst case
 +4.966 ns setup, Slow 1100mV 0C). `quartus_asm`/`quartus_cpf` both
 completed with 0 errors, producing a real `.sof`/`.rbf`.
-
-## Disclaimer
-
-Developed and synthesized with Quartus Prime Lite 21.1. No physical
-DE10-Standard board was connected to the machine this was built on, so the
-programming step itself (JTAG or SD card) has not been physically
-exercised — everything up through bitstream generation (`.sof`/`.rbf`) has.
